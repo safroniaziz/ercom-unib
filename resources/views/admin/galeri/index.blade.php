@@ -1,0 +1,26 @@
+@extends('layouts.admin_template')
+@section('main-title','Manajemen Galeri')
+@section('manajemen-title','Manajemen Galeri')
+@section('manajemen-title-right')
+	<a onclick="tambahGaleri()" class="btn btn-primary pull-right btn-flat"  style="margin-top: -8px; margin-left: 10px;"><i class="fa fa-plus"></i>&nbsp;Tambah Galeri</a>
+	<button type="button" class="btn btn-warning pull-right btn-flat" style="margin-top: -8px; margin-left: 10px;" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false"><i class="fa fa-trash"></i>&nbsp;File Sampah
+@endsection
+@section('content')
+
+	<div class="row">
+			<div class="col-md-12 table-responsive">
+			<table class="table table-bordered table-hover table-striped" id="table-galeri" style="width: 100%;">
+				<thead>
+					<tr>
+						<th>No</th>
+						<th>Nama Kegiatan</th>
+						<th>Foto</th>
+						<th>Aksi</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+
+	@include('admin/galeri.form-galeri')
+@endsection
